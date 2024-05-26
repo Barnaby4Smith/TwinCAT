@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{b3ecad9f-d573-47a2-b344-f69e047572b9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	counter : INT := 0;
+	
+	Setup : BOOL := TRUE;
+	
+	// AI Scaling to percent
+	AI_Low : INT := 3375; 
+	AI_High : INT := 20200;
+	AI0_scaled : INT := 0;
+	
+	// led toggle rates (Hz)
+	toggleRate : INT := 1;
+	toggleRateMax : INT := 100;
+	toggleRateMin : INT := 1;
+	toggleEnable: BOOL := FALSE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// setup
+IF Setup THEN
+	GVL.DO0 := FALSE;
+	GVL.DO1 := TRUE;
+	
+	// setup finished
+	Setup := FALSE;
+END_IF
+
+
+// main loop
+counter := counter + 100;
+IF counter > 30000 THEN
+	counter := 0;
+END_IF
+
+// scale AI value to percent
+AI0_scaled := Scale(GVL.AI0, 
+					AI_High, AI_Low,
+					toggleRateMax, toggleRateMin);
+					
+IF GVL.DI0 THEN
+	toggleEnable := TRUE;
+END_IF
+
+IF GVL.DI1 THEN
+	toggleEnable := FALSE;
+END_IF
+
+IF toggleEnable THEN
+	IF counter > GVL.AI0 THEN
+		GVL.DO0 := NOT GVL.DO0;
+		GVL.DO1 := NOT GVL.DO1;
+		counter := 0;
+	END_IF
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="42" Count="2" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="49" Count="2" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="91" Count="2" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="76" Count="2" />
+      <LineId Id="80" Count="2" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="87" Count="1" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="47" Count="1" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="23" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

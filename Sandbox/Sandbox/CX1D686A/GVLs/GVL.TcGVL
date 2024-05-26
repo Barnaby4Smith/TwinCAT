@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL" Id="{666eb80e-b04b-4500-b429-89e737f23213}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	// module status'
+	ProfinetState AT %I* : UINT;
+	EtherCATState AT %I* : UINT;
+	EtherCATAutoState AT %I* : UINT;
+	
+
+	// digital inputs
+	DI0 AT %I* : BOOL;
+	DI1 AT %I* : BOOL;
+	DI2 AT %I* : BOOL;
+	DI3 AT %I* : BOOL;
+	DI4 AT %I* : BOOL;
+	DI5 AT %I* : BOOL;
+	DI6 AT %I* : BOOL;
+	DI7 AT %I* : BOOL;
+	
+	// digital outputs
+	DO0 AT %Q* : BOOL;
+	DO1 AT %Q* : BOOL;
+	DO2 AT %Q* : BOOL;
+	DO3 AT %Q* : BOOL;
+	
+	// analog inputs
+	AI0 AT %I* : INT;
+	AI1 AT %I* : INT;
+	AI2 AT %I* : INT;
+	AI3 AT %I* : INT;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
