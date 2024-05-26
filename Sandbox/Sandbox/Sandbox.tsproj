@@ -31,7 +31,6 @@
 			<Licenses>
 				<Target>
 					<ManualSelect>{6BCAF065-32F5-44AC-A233-31D91205AB5B}</ManualSelect>
-					<LicenseDevice DongleHardwareId="2"/>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -151,107 +150,10 @@
 		<Io>
 			<Device Id="1" DevType="142" AmsPort="28673" AmsNetId="5.29.104.106.2.1" RemoteName="Device 1 (Profinet Device CCAT (RT))">
 				<Name>Device 1 (Profinet Device CCAT (RT))</Name>
-				<DevData>000000000000000000000000409c0000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000010000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
-				<Image Id="1" AddrType="1" ImageType="3" SizeIn="4" SizeOut="4">
+				<DevData>00000000000000000000000000000000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<Image Id="1" AddrType="1" ImageType="3" SizeIn="2" SizeOut="2">
 					<Name>Image</Name>
 				</Image>
-				<Box Id="1" BoxType="9136">
-					<Name>cx9020</Name>
-					<Comment><![CDATA[GSDML Name: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-Path: $(TWINCAT3DIR)Config\Io\Profinet\
-VendorName: Beckhoff Automation
-OrderNumber: CX9020-B930
-HW Release Version: 1
-SW Release Version: V3.00]]></Comment>
-					<ImageId>5</ImageId>
-					<Vars VarGrpType="1">
-						<Name>Inputs</Name>
-						<Var>
-							<Name>PnIoBoxState</Name>
-							<Comment><![CDATA[0x0001 = Device is in I/O exchange
-0x0002 = Device is blinking
-0x0004 = Provider State -> 0 = Stop, 1 = Run
-0x0008 = Problem Indicator -> 0 = OK, 1 = Error
-]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-					</Vars>
-					<Vars VarGrpType="2">
-						<Name>Outputs</Name>
-						<Var>
-							<Name>PnIoBoxCtrl</Name>
-							<Comment><![CDATA[0x00XX = Last two hex characters of station name
-]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-					</Vars>
-					<Profinet DeviceId="40" VendorId="288" FrameOffset="32768" Flags="16" ProtocolType="4" BoxOnDeviceTyp="142" MaxPhysSlotNr="255" AvailableSlots="0..255" InstanceServerPort="50000" InstanceClientPort="50001" InstanceNumberOfARs="5" InstanceNumberOfAPIs="1" MinDeviceInterval="32" NrOfGsdmlDap="2" SavePnIoBoxValues="1d00" BoxTypeInfo="CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port" MacAdd5="71" GSDMLPath="$(TWINCAT3DIR)Config\Io\Profinet\GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml" ImagePath="C:\TwinCAT\3.1\Config\Io\Profinet\GSDML-0120-0028-CX9020.bmp" MainFamily="I/O" ProductFamily="TwinCAT CCAT Device" OrderNr="CX9020-B930" DefaultDNSName="cx9020" VendorName="Beckhoff Automation" FamDescription="CCAT products, protection type IP20" GraphicFile="GSDML-0120-0028-CX50x0" SWVersion="V3.00" HWVersion="1" AltLanguage="7">
-						<UsedGsdmlModule ModuleIdentNumber="-2147475456" ModuleName="DAP Module" InfoText="CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port" OrderNumber="CX9020-B930">
-							<Slot>0</Slot>
-						</UsedGsdmlModule>
-						<UsedGsdmlSubModule SubModuleIdentNumber="1" SubSlotNumber="1" TypeOfSubmodule="3" Id="DAP 10" SubModuleName="CX9020-B930 V2.32 (at least FW 3.00)" InfoText="CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port"/>
-						<API Id="1">
-							<Name>API</Name>
-							<ImageId>4</ImageId>
-							<Module Id="#x031d0001" DAP="true" ModuleIdentNumber="-2147475456" ModuleInfo="CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port">
-								<Name>Term 1 (DAP Module)</Name>
-								<Comment><![CDATA[GSDML: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-Module Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
-OrderNumber: CX9020-B930]]></Comment>
-								<ImageId>182</ImageId>
-								<SubModule Id="#x031c0001" SubModuleIdentNumber="1" TypeOfSubModule="3" SubSlotNumber="1" IsFixSubmodule="true" SubModuleID="DAP 10" AddSubModFlags="124">
-									<Name>Subterm 1 (CX9020-B930 V2.32 (at least FW 3.00))</Name>
-									<Comment><![CDATA[GSDML: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-Submodule Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
-]]></Comment>
-									<ImageId>183</ImageId>
-									<Vars VarGrpType="1">
-										<Name>Inputs</Name>
-									</Vars>
-									<Vars VarGrpType="2">
-										<Name>Outputs</Name>
-									</Vars>
-								</SubModule>
-								<SubModule Id="#x031c0002" SubModuleIdentNumber="32768" TypeOfSubModule="1" SubSlotNumber="32768" IsFixSubmodule="true" SubModuleID="IDS_10I" InterfaceData="0100000000000000000000000000000000000000000098000300000000000000">
-									<Name>Subterm 2 (Interface)</Name>
-									<Comment><![CDATA[GSDML: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-]]></Comment>
-									<ImageId>183</ImageId>
-									<Vars VarGrpType="1">
-										<Name>Inputs</Name>
-									</Vars>
-									<Vars VarGrpType="2">
-										<Name>Outputs</Name>
-									</Vars>
-								</SubModule>
-								<SubModule Id="#x031c0003" SubModuleIdentNumber="32769" TypeOfSubModule="2" SubSlotNumber="32769" IsFixSubmodule="true" SubModuleID="IDS_10P1" PortData="00000000000000000000000000000000000000000000000000000000">
-									<Name>Subterm 3 (Port 1)</Name>
-									<Comment><![CDATA[GSDML: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-]]></Comment>
-									<ImageId>183</ImageId>
-									<Vars VarGrpType="1">
-										<Name>Inputs</Name>
-									</Vars>
-									<Vars VarGrpType="2">
-										<Name>Outputs</Name>
-									</Vars>
-								</SubModule>
-								<SubModule Id="#x031c0004" SubModuleIdentNumber="32770" TypeOfSubModule="2" SubSlotNumber="32770" IsFixSubmodule="true" SubModuleID="IDS_10P2" PortData="00000000000000000000000000000000000000000000000000000000">
-									<Name>Subterm 4 (Port 2)</Name>
-									<Comment><![CDATA[GSDML: GSDML-V2.43-beckhoff-TCPNCCATDevice-20231009.xml
-]]></Comment>
-									<ImageId>183</ImageId>
-									<Vars VarGrpType="1">
-										<Name>Inputs</Name>
-									</Vars>
-									<Vars VarGrpType="2">
-										<Name>Outputs</Name>
-									</Vars>
-								</SubModule>
-							</Module>
-						</API>
-					</Profinet>
-				</Box>
 				<Profinet PLCPortNr="851" AddPortCount="1">
 					<Ethernet CCatEepromOffs="#x00000200" CCatEepromSize="#x00000040" CCatSwitchOffs="#x00030000" CCatSwitchSize="#x00002000" CCatGpioOffs="#x00000300" CCatGpioSize="#x00000020" CCatTimeOffs="#x00000400" CCatTimeSize="#x00000080" CCatIntCtrlOffs="#x00000280" CCatIntCtrlSize="#x00000010" PortCount="2" PortSwitched="true"/>
 				</Profinet>
@@ -271,14 +173,14 @@ Submodule Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
 				<Image Id="2" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
-				<Box Id="2" BoxType="9099">
+				<Box Id="1" BoxType="9099">
 					<Name>Term 1 (EK1200)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
-					<Box Id="3" BoxType="9099">
-						<Name>Term 3 (EL1008)</Name>
+					<Box Id="2" BoxType="9099">
+						<Name>Term 2 (EL1008)</Name>
 						<ImageId>7</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000002">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000001">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -323,10 +225,10 @@ Submodule Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box Id="4" BoxType="9099">
-						<Name>Term 4 (EL2004)</Name>
+					<Box Id="3" BoxType="9099">
+						<Name>Term 3 (EL2004)</Name>
 						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x01000003">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x07d43052" RevisionNo="#x00100000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2004 4Ch. Dig. Output 24V, 0.5A" Desc="EL2004" PortABoxInfo="#x01000002">
 							<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 							<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
@@ -351,10 +253,10 @@ Submodule Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
 							</Pdo>
 						</EtherCAT>
 					</Box>
-					<Box Id="5" BoxType="9099" BoxFlags="#x00000020">
-						<Name>Term 5 (EL3044)</Name>
+					<Box Id="4" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 4 (EL3044)</Name>
 						<ImageId>1002</ImageId>
-						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0be43052" RevisionNo="#x00130000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3044 4Ch. Ana. Input 0-20mA" Desc="EL3044" PortABoxInfo="#x01000004">
+						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0be43052" RevisionNo="#x00130000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3044 4Ch. Ana. Input 0-20mA" Desc="EL3044" PortABoxInfo="#x01000003">
 							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
 							<SyncMan>001100000400000003000000000000000000001104000000</SyncMan>
@@ -364,25 +266,25 @@ Submodule Info: CX9020-B930 PROFINET IO Device with I/Os; V2.32; 2 Port
 							<BootStrapData>0010f400f410f400</BootStrapData>
 							<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a01</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01" Flags="#x00008020">
+								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02" Flags="#x00008020">
+								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03" Flags="#x00008020">
+								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05" Flags="#x00008020">
+								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6000" Sub="#x07" Flags="#x00008020">
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
@@ -392,11 +294,11 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<Entry Name="Status__">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f" Flags="#x00008020">
+								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10" Flags="#x00008020">
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
@@ -560,10 +462,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<CoeProfile ProfileNo="19665801"/>
 						</EtherCAT>
 					</Box>
-					<Box Id="6" BoxType="9099">
+					<Box Id="5" BoxType="9099">
 						<Name>Term 5 (EL9011)</Name>
 						<ImageId>1003</ImageId>
-						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000005"/>
+						<EtherCAT CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x23333050" InfoDataState="false" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL9011 End Terminal" Desc="EL9011" PortABoxInfo="#x01000004"/>
 					</Box>
 				</Box>
 				<EtherCAT/>
@@ -581,7 +483,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Name>Image</Name>
 				</Image>
 				<Ethernet DeviceDesc="FEC1"/>
-				<Eap EapDeviceGuid="{EDAC74C3-4016-43A2-96E7-22AA5EDD173B}"/>
+				<Eap EapDeviceGuid="{FA82B946-BB70-4AC8-9013-78D41777C83F}"/>
 			</Device>
 			<Device Id="5" DevType="121">
 				<Name>Device 5 (NOV-DP-RAM)</Name>
@@ -605,9 +507,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030030"/>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500840000403}" Id="#x02030020"/>
 		<OwnerA Name="TIPC^CX1D686A^CX1D686A Instance">
 			<OwnerB Name="TIID^Device 1 (Profinet Device CCAT (RT))">
 				<Link VarA="PlcTask Inputs^GVL.ProfinetState" VarB="Inputs^DevState"/>
@@ -615,7 +514,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)">
 				<Link VarA="PlcTask Inputs^GVL.EtherCATState" VarB="Inputs^DevState"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL1008)">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL1008)">
 				<Link VarA="PlcTask Inputs^GVL.DI0" VarB="Channel 1^Input"/>
 				<Link VarA="PlcTask Inputs^GVL.DI1" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL.DI2" VarB="Channel 3^Input"/>
@@ -625,13 +524,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL.DI6" VarB="Channel 7^Input"/>
 				<Link VarA="PlcTask Inputs^GVL.DI7" VarB="Channel 8^Input"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL2004)">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL.DO0" VarB="Channel 1^Output"/>
 				<Link VarA="PlcTask Outputs^GVL.DO1" VarB="Channel 2^Output"/>
 				<Link VarA="PlcTask Outputs^GVL.DO2" VarB="Channel 3^Output"/>
 				<Link VarA="PlcTask Outputs^GVL.DO3" VarB="Channel 4^Output"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL3044)">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL3044)">
 				<Link VarA="PlcTask Inputs^GVL.AI0" VarB="AI Standard Channel 1^Value"/>
 				<Link VarA="PlcTask Inputs^GVL.AI1" VarB="AI Standard Channel 2^Value"/>
 				<Link VarA="PlcTask Inputs^GVL.AI2" VarB="AI Standard Channel 3^Value"/>
