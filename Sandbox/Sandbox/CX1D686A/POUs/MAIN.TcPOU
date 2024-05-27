@@ -41,11 +41,11 @@ AI0_scaled := Scale(GVL.AI0,
 					AI_High, AI_Low,
 					toggleRateMax, toggleRateMin);
 					
-IF GVL.DI0 THEN
+IF GVL.DI0 OR GVL.DI0_OR THEN
 	toggleEnable := TRUE;
 END_IF
 
-IF GVL.DI1 THEN
+IF GVL.DI1 OR GVL.DI1_OR THEN
 	toggleEnable := FALSE;
 END_IF
 

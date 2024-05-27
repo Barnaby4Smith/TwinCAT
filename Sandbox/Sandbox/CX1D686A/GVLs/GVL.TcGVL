@@ -4,14 +4,14 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	// module status'
-	ProfinetState AT %I* : UINT;
-	EtherCATState AT %I* : UINT;
-	EtherCATAutoState AT %I* : UINT;
+	ProfinetState AT %I* : UINT; // ProfiNet Status
+	EtherCATState AT %I* : UINT; // EtherCAT Status
+	EtherCATAutoState AT %I* : UINT; // EtherCAT Automation Status
 	
 
 	// digital inputs
-	DI0 AT %I* : BOOL;
-	DI1 AT %I* : BOOL;
+	DI0 AT %I* : BOOL; // Green Button
+	DI1 AT %I* : BOOL; // Red Button
 	DI2 AT %I* : BOOL;
 	DI3 AT %I* : BOOL;
 	DI4 AT %I* : BOOL;
@@ -19,15 +19,19 @@ VAR_GLOBAL
 	DI6 AT %I* : BOOL;
 	DI7 AT %I* : BOOL;
 	
+	// digital software overrides
+	DI0_OR : BOOL := FALSE; // Green Button Override
+	DI1_OR : BOOL := FALSE; // Red Button Override
+	
 	// digital outputs
-	DO0 AT %Q* : BOOL;
-	DO1 AT %Q* : BOOL;
+	DO0 AT %Q* : BOOL; // Green LED
+	DO1 AT %Q* : BOOL; // Red LED
 	DO2 AT %Q* : BOOL;
 	DO3 AT %Q* : BOOL;
 	
 	// analog inputs
-	AI0 AT %I* : INT;
-	AI1 AT %I* : INT;
+	AI0 AT %I* : INT; // 4-20mA Input 1
+	AI1 AT %I* : INT; // 4-20mA Input 2
 	AI2 AT %I* : INT;
 	AI3 AT %I* : INT;
 	

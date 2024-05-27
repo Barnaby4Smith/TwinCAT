@@ -28,31 +28,40 @@
 	</ImageDatas>
 	<Project ProjectGUID="{ADC68AC9-25B0-4DC8-B496-D244755EB7C9}" TargetNetId="5.29.104.106.1.1" ShowHideConfigurations="#x3c7">
 		<System>
-			<Licenses IgnoreProjectLicenses="true">
+			<Licenses>
 				<Target>
-					<ManualSelect>{3FF18E97-7754-401B-93FB-70544DE28A13}</ManualSelect>
 					<ManualSelect>{6BCAF065-32F5-44AC-A233-31D91205AB5B}</ManualSelect>
-					<ManualSelect>{66689887-CCBD-452C-AC9A-039D997C6E66}</ManualSelect>
-					<ManualSelect>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="4" Priority="30" CycleTime="500000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
+					<Name>VISU_TASK</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{ED5F9604-B0F1-403F-BE89-18D1AC74AC11}" Name="CX1D686A" PrjFilePath="CX1D686A\CX1D686A.plcproj" TmcFilePath="CX1D686A\CX1D686A.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{1D2B8745-56F5-BA8C-A502-A7D11174BA11}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{CE9E5A0E-184C-02D8-9429-FBD72910E8C8}">
 					<Name>CX1D686A Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
+							<Name>GVL.DI0</Name>
+							<Comment><![CDATA[ digital inputs]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL.ProfinetState</Name>
 							<Comment><![CDATA[ module status']]></Comment>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.DI1</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.EtherCATState</Name>
@@ -61,15 +70,6 @@
 						<Var>
 							<Name>GVL.EtherCATAutoState</Name>
 							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL.DI0</Name>
-							<Comment><![CDATA[ digital inputs]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL.DI1</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.DI2</Name>
@@ -143,9 +143,19 @@
 							<Priority>20</Priority>
 							<CycleTime>10000000</CycleTime>
 						</Context>
+						<Context>
+							<Id>1</Id>
+							<Name>VISU_TASK</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>30</Priority>
+							<CycleTime>50000000</CycleTime>
+						</Context>
 					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+						<TaskPouOid Prio="30" OTCID="#x08502002"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
@@ -153,7 +163,7 @@
 		<Io>
 			<Device Id="1" DevType="142" AmsPort="28673" AmsNetId="5.29.104.106.2.1" RemoteName="Device 1 (Profinet Device CCAT (RT))">
 				<Name>Device 1 (Profinet Device CCAT (RT))</Name>
-				<DevData>000000000000000000000000409c0000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<DevData>000000000000000000000000a0860100ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
 				<Image Id="1" AddrType="1" ImageType="3" SizeIn="2" SizeOut="2">
 					<Name>Image</Name>
 				</Image>
@@ -509,4 +519,42 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</Device>
 		</Io>
 	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030030"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030020"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500840000403}" Id="#x02030010"/>
+		<OwnerA Name="TIPC^CX1D686A^CX1D686A Instance">
+			<OwnerB Name="TIID^Device 1 (Profinet Device CCAT (RT))">
+				<Link VarA="PlcTask Inputs^GVL.ProfinetState" VarB="Inputs^DevState"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)">
+				<Link VarA="PlcTask Inputs^GVL.EtherCATState" VarB="Inputs^DevState"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL1008)">
+				<Link VarA="PlcTask Inputs^GVL.DI0" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI1" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI2" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI3" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI4" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI5" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI6" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI7" VarB="Channel 8^Input"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL.DO0" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^GVL.DO1" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL.DO2" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^GVL.DO3" VarB="Channel 4^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL3044)">
+				<Link VarA="PlcTask Inputs^GVL.AI0" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^GVL.AI1" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^GVL.AI2" VarB="AI Standard Channel 3^Value"/>
+				<Link VarA="PlcTask Inputs^GVL.AI3" VarB="AI Standard Channel 4^Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT Automation Protocol)">
+				<Link VarA="PlcTask Inputs^GVL.EtherCATAutoState" VarB="Inputs^DevState"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmProject>
