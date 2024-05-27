@@ -1,4 +1,6 @@
 """ pyadsTest.py
+    This script tests the connection to the PLC, and performs several operations
+    to demonstrate some basic functionality of the pyads library.
     
     The script opens a connection to the PLC, writes to the start and stop buttons,
     reads the state of the start button LED, and prints all symbols from the PLC.
