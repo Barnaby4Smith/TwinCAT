@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<TcModuleClass>
+	<Translations/>
+	<DataTypes>
+		<DataType>
+			<Name GUID="{3DBE4583-6754-3359-DC72-46C1FF16958D}">Inputs_TYPE</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>Frm0State</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Frm0WcState</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Frm0InputToggle</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>SlaveCount</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>DevState</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{D30DCBF5-35A8-F9CB-5DB5-8E9469BD330E}">Outputs_TYPE</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>Frm0Ctrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Frm0WcCtrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>DevCtrl</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000005}">UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{E7AFE320-96A3-30CF-755C-5C0309DDF0CD}">ECAT_EL1008_SM_E7AFE320</Name>
+			<BitSize>8</BitSize>
+			<SubItem>
+				<Name>Channel_1_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_2_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>1</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_3_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>2</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_4_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>3</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_5_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>4</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_6_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>5</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_7_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>6</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_8_Input</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>7</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{CCCF596A-45C7-104A-7099-53348B3BD86A}">ECAT_EL2004_SM_CCCF596A</Name>
+			<BitSize>4</BitSize>
+			<SubItem>
+				<Name>Channel_1_Output</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_2_Output</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>1</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_3_Output</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>2</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Channel_4_Output</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<BitSize>1</BitSize>
+				<BitOffs>3</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{9EBE6C29-107C-52D2-7A69-28F4D5F1E509}">ECAT_EL3044_PDO_9EBE6C29</Name>
+			<BitSize>16</BitSize>
+			<SubItem>
+				<Name>Underrange</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Underrange event active]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Overrange</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Overrange event active]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>1</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_11</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>2</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_12</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>3</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_21</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>4</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Limit_22</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>5</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Error</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>6</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>TxPDO_State</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>14</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>TxPDO_Toggle</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000010}">BIT</Type>
+				<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
+				<BitSize>1</BitSize>
+				<BitOffs>15</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{10B0AEF9-C5A7-322A-EB44-16FA4B2B099A}">ECAT_EL3044_PDO_10B0AEF9</Name>
+			<BitSize>32</BitSize>
+			<SubItem>
+				<Name>Status</Name>
+				<Type GUID="{9EBE6C29-107C-52D2-7A69-28F4D5F1E509}">ECAT_EL3044_PDO_9EBE6C29</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>Value</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{281A70B8-73E2-4122-92AB-28BFD6A316AA}">ECAT_EL3044_SM_281A70B8</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>AI_Standard_Channel_1</Name>
+				<Type GUID="{10B0AEF9-C5A7-322A-EB44-16FA4B2B099A}">ECAT_EL3044_PDO_10B0AEF9</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AI_Standard_Channel_2</Name>
+				<Type GUID="{10B0AEF9-C5A7-322A-EB44-16FA4B2B099A}">ECAT_EL3044_PDO_10B0AEF9</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AI_Standard_Channel_3</Name>
+				<Type GUID="{10B0AEF9-C5A7-322A-EB44-16FA4B2B099A}">ECAT_EL3044_PDO_10B0AEF9</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>AI_Standard_Channel_4</Name>
+				<Type GUID="{10B0AEF9-C5A7-322A-EB44-16FA4B2B099A}">ECAT_EL3044_PDO_10B0AEF9</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+		</DataType>
+	</DataTypes>
+	<Modules>
+		<Module TcSmClass="TComPlcObjDef">
+			<Name>Device 2 (EtherCAT)_Image</Name>
+			<DataAreas>
+				<DataArea>
+					<AreaNo AreaType="InputSrc" CreateSymbols="true">0</AreaNo>
+					<Symbol>
+						<Name>Inputs</Name>
+						<BaseType>Inputs_TYPE</BaseType>
+						<BitSize>128</BitSize>
+						<BitOffs>1520</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>).Term 1 (EK1200).Term 2 (EL1008).SM_0</Name>
+						<BaseType>ECAT_EL1008_SM_E7AFE320</BaseType>
+						<BitSize>8</BitSize>
+						<BitOffs>68</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>).Term 1 (EK1200).Term 4 (EL3044).SM_3</Name>
+						<BaseType>ECAT_EL3044_SM_281A70B8</BaseType>
+						<BitSize>128</BitSize>
+						<BitOffs>52</BitOffs>
+					</Symbol>
+				</DataArea>
+				<DataArea>
+					<AreaNo AreaType="OutputDst" CreateSymbols="true">1</AreaNo>
+					<Symbol>
+						<Name>Outputs</Name>
+						<BaseType>Outputs_TYPE</BaseType>
+						<BitSize>128</BitSize>
+						<BitOffs>1520</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>).Term 1 (EK1200).Term 3 (EL2004).SM_0</Name>
+						<BaseType>ECAT_EL2004_SM_CCCF596A</BaseType>
+						<BitSize>4</BitSize>
+						<BitOffs>39</BitOffs>
+					</Symbol>
+				</DataArea>
+				<DataArea>
+					<AreaNo AreaType="Internal" CreateSymbols="true">2</AreaNo>
+				</DataArea>
+			</DataAreas>
+		</Module>
+	</Modules>
+</TcModuleClass>

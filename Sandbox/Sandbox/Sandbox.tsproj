@@ -37,14 +37,14 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="30" CycleTime="500000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
+				<Task Id="4" Priority="30" CycleTime="400000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
 					<Name>VISU_TASK</Name>
 				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{ED5F9604-B0F1-403F-BE89-18D1AC74AC11}" Name="CX1D686A" PrjFilePath="CX1D686A\CX1D686A.plcproj" TmcFilePath="CX1D686A\CX1D686A.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{BEB30E7B-4CFB-6535-396F-E30C58B30738}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{19DCB0B0-E41B-32EF-C856-B4F135656B6C}">
 					<Name>CX1D686A Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -155,7 +155,7 @@
 								<OTCID>#x02010040</OTCID>
 							</ManualConfig>
 							<Priority>30</Priority>
-							<CycleTime>50000000</CycleTime>
+							<CycleTime>40000000</CycleTime>
 						</Context>
 					</Contexts>
 					<TaskPouOids>
@@ -168,7 +168,7 @@
 		<Io>
 			<Device Id="1" DevType="142" AmsPort="28673" AmsNetId="5.29.104.106.2.1" RemoteName="Device 1 (Profinet Device CCAT (RT))">
 				<Name>Device 1 (Profinet Device CCAT (RT))</Name>
-				<DevData>000000000000000000000000a0860100ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<DevData>000000000000000000000000409c0000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
 				<Image Id="1" AddrType="1" ImageType="3" SizeIn="2" SizeOut="2">
 					<Name>Image</Name>
 				</Image>
@@ -188,7 +188,7 @@
 						<SlotNo>0</SlotNo>
 					</Ccat>
 				</AddressInfo>
-				<Image Id="2" AddrType="9" ImageType="3">
+				<Image Id="2" ImageFlags="#x00000730" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
@@ -198,7 +198,7 @@
 					<Box Id="2" BoxType="9099">
 						<Name>Term 2 (EL1008)</Name>
 						<ImageId>7</ImageId>
-						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000001">
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" InfoDataAddr="true" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000001">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
 							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
 							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
@@ -537,13 +537,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL1008)">
 				<Link VarA="PlcTask Inputs^GVL.DI0" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI1" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI2" VarB="Channel 3^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI3" VarB="Channel 4^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI4" VarB="Channel 5^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI5" VarB="Channel 6^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI6" VarB="Channel 7^Input"/>
-				<Link VarA="PlcTask Inputs^GVL.DI7" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL.DI2" VarB="Channel 2^Input"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1200)^Term 3 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL.DO0" VarB="Channel 1^Output"/>

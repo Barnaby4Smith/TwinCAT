@@ -37,38 +37,41 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="30" CycleTime="500000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
+				<Task Id="4" Priority="30" CycleTime="400000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
 					<Name>VISU_TASK</Name>
 				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{ED5F9604-B0F1-403F-BE89-18D1AC74AC11}" Name="CX1D686A" PrjFilePath="CX1D686A\CX1D686A.plcproj" TmcFilePath="CX1D686A\CX1D686A.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{CE9E5A0E-184C-02D8-9429-FBD72910E8C8}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{19DCB0B0-E41B-32EF-C856-B4F135656B6C}">
 					<Name>CX1D686A Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
 							<Name>GVL.DI0</Name>
-							<Comment><![CDATA[ digital inputs]]></Comment>
+							<Comment><![CDATA[ Green Button]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.ProfinetState</Name>
-							<Comment><![CDATA[ module status']]></Comment>
+							<Comment><![CDATA[ ProfiNet Status]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>GVL.DI1</Name>
+							<Comment><![CDATA[ Red Button]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.EtherCATState</Name>
+							<Comment><![CDATA[ EtherCAT Status]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>GVL.EtherCATAutoState</Name>
+							<Comment><![CDATA[ EtherCAT Automation Status]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
@@ -97,11 +100,12 @@
 						</Var>
 						<Var>
 							<Name>GVL.AI0</Name>
-							<Comment><![CDATA[ analog inputs]]></Comment>
+							<Comment><![CDATA[ 4-20mA Input 1]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL.AI1</Name>
+							<Comment><![CDATA[ 4-20mA Input 2]]></Comment>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -117,11 +121,12 @@
 						<Name>PlcTask Outputs</Name>
 						<Var>
 							<Name>GVL.DO0</Name>
-							<Comment><![CDATA[ digital outputs]]></Comment>
+							<Comment><![CDATA[ Green LED]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.DO1</Name>
+							<Comment><![CDATA[ Red LED]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -150,7 +155,7 @@
 								<OTCID>#x02010040</OTCID>
 							</ManualConfig>
 							<Priority>30</Priority>
-							<CycleTime>50000000</CycleTime>
+							<CycleTime>40000000</CycleTime>
 						</Context>
 					</Contexts>
 					<TaskPouOids>
@@ -163,7 +168,7 @@
 		<Io>
 			<Device Id="1" DevType="142" AmsPort="28673" AmsNetId="5.29.104.106.2.1" RemoteName="Device 1 (Profinet Device CCAT (RT))">
 				<Name>Device 1 (Profinet Device CCAT (RT))</Name>
-				<DevData>000000000000000000000000a0860100ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<DevData>000000000000000000000000409c0000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
 				<Image Id="1" AddrType="1" ImageType="3" SizeIn="2" SizeOut="2">
 					<Name>Image</Name>
 				</Image>
@@ -183,7 +188,7 @@
 						<SlotNo>0</SlotNo>
 					</Ccat>
 				</AddressInfo>
-				<Image Id="2" AddrType="9" ImageType="3">
+				<Image Id="2" ImageFlags="#x00000730" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
