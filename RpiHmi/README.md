@@ -8,6 +8,7 @@
 1. Script needs to be deployable
     - IP address should be variable
     - deploy via docker container through kubernetes
+    - Symbols will all be created on the PLC - symbols need to be dynamic
 
 2. RPI should run in kisok mode, e.g. no settings or keyboard, just the HMI
 
