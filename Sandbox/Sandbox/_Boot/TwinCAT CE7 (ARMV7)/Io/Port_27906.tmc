@@ -267,13 +267,13 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						<BitOffs>1520</BitOffs>
 					</Symbol>
 					<Symbol>
-						<Name>).Term 1 (EK1200).Term 2 (EL1008).SM_0</Name>
+						<Name>Term 1 (EK1200).Term 2 (EL1008).SM_0</Name>
 						<BaseType>ECAT_EL1008_SM_E7AFE320</BaseType>
 						<BitSize>8</BitSize>
 						<BitOffs>68</BitOffs>
 					</Symbol>
 					<Symbol>
-						<Name>).Term 1 (EK1200).Term 4 (EL3044).SM_3</Name>
+						<Name>Term 1 (EK1200).Term 4 (EL3044).SM_3</Name>
 						<BaseType>ECAT_EL3044_SM_281A70B8</BaseType>
 						<BitSize>128</BitSize>
 						<BitOffs>52</BitOffs>
@@ -288,7 +288,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						<BitOffs>1520</BitOffs>
 					</Symbol>
 					<Symbol>
-						<Name>).Term 1 (EK1200).Term 3 (EL2004).SM_0</Name>
+						<Name>Term 1 (EK1200).Term 3 (EL2004).SM_0</Name>
 						<BaseType>ECAT_EL2004_SM_CCCF596A</BaseType>
 						<BitSize>4</BitSize>
 						<BitOffs>39</BitOffs>

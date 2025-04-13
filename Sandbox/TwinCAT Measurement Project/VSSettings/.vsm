@@ -5,12 +5,12 @@
   <Children>
     <Node>
       <Title>ScopeWizard</Title>
-      <Expanded>True</Expanded>
-      <FileName>C:\Git\TwinCAT\Sandbox\TwinCAT Measurement Project\ScopeWizard.tcscopex</FileName>
+      <Expanded>False</Expanded>
+      <FileName>C:\git\TwinCAT\Sandbox\TwinCAT Measurement Project\ScopeWizard.tcscopex</FileName>
       <Children>
         <Node>
           <Title>DataPool</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -44,7 +44,7 @@
               <Children />
             </Node>
             <Node>
-              <Title>Value (1)</Title>
+              <Title>Value</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
@@ -53,12 +53,12 @@
         </Node>
         <Node>
           <Title>YT Chart</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>Axis Group</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -77,7 +77,7 @@
             </Node>
             <Node>
               <Title>Axis Group (1)</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>

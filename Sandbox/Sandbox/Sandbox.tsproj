@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.56">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.66">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -11,7 +11,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
 			<BitSize>6</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -44,24 +44,19 @@
 		</System>
 		<Plc>
 			<Project GUID="{ED5F9604-B0F1-403F-BE89-18D1AC74AC11}" Name="CX1D686A" PrjFilePath="CX1D686A\CX1D686A.plcproj" TmcFilePath="CX1D686A\CX1D686A.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{19DCB0B0-E41B-32EF-C856-B4F135656B6C}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="CX1D686A\CX1D686A.tmc" TmcHash="{7F418D2B-1182-0B40-6EE1-2885B45C8297}">
 					<Name>CX1D686A Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
-						<Var>
-							<Name>GVL.DI0</Name>
-							<Comment><![CDATA[ Green Button]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
 						<Var>
 							<Name>GVL.ProfinetState</Name>
 							<Comment><![CDATA[ ProfiNet Status]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL.DI1</Name>
-							<Comment><![CDATA[ Red Button]]></Comment>
+							<Name>GVL.DI0</Name>
+							<Comment><![CDATA[ Green Button]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -73,6 +68,11 @@
 							<Name>GVL.EtherCATAutoState</Name>
 							<Comment><![CDATA[ EtherCAT Automation Status]]></Comment>
 							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.DI1</Name>
+							<Comment><![CDATA[ Red Button]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL.DI2</Name>
@@ -168,7 +168,7 @@
 		<Io>
 			<Device Id="1" DevType="142" AmsPort="28673" AmsNetId="5.29.104.106.2.1" RemoteName="Device 1 (Profinet Device CCAT (RT))">
 				<Name>Device 1 (Profinet Device CCAT (RT))</Name>
-				<DevData>000000000000000000000000409c0000ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<DevData>000000000000000000000000a0860100ffffffff01000000000000f00000010000400000ffff0000000000000000000000000000000000000000000000000000000000000000000000000000000000000001051e5747040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
 				<Image Id="1" AddrType="1" ImageType="3" SizeIn="2" SizeOut="2">
 					<Name>Image</Name>
 				</Image>
